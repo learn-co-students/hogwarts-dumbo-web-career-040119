@@ -7,19 +7,12 @@ import Detail from './Detail.js'
 
 class App extends Component {
 
-  state = {
-
-    isInDetailView : false
-
-  }
 
   render() {
     return (
       <div className="App">
           <Nav />
-          {this.isInDetailView ? <Detail /> : <TileContainer hogData = {hogs}/>}
-
-
+          <TileContainer hogData = {hogs} />
       </div>
     )
   }

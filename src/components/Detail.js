@@ -7,7 +7,7 @@ class Detail extends Component {
   render() {
     return (
       <div className="Detail">
-
+        This is the detail page
 
       </div>
     )

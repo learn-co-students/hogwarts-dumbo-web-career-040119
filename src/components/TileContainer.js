@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
 import '../App.css';
-import Nav from './Nav'
-import hogs from '../porkers_data';
 import Tile from './Tile.js'
-import Detail from './Detail.js'
+
 
 class TileContainer extends Component {
 
