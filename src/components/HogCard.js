@@ -18,16 +18,18 @@ class HogCard extends React.Component {
 
   return (
     <div onClick={this.toggleDetails} className="ui card">
-    <img src={this.props.image}/>
-      <h2>{this.props.name}</h2>
       { this.state.clicked ?
-        <div>
+        <Fragment>
+          <h2>{this.props.name}</h2>
           <h3>Specialty: {this.props.specialty}</h3>
           <p>Weight as a ratio of hog to LG - 24.7 Cu. Ft. French Door Refrigerator with Thru-the-Door Ice and Water: {this.props.ratio}</p>
           <h4>Highest Medal Achieved: {this.props.medal}</h4>
-        </div>
+        </Fragment>
         :
-        null
+        <Fragment>
+        <img src={this.props.image}/>
+        <h2>{this.props.name}</h2>
+        </Fragment>
       }
     </div>
   );
