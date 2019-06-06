@@ -12,11 +12,10 @@ const SortBar = (props) => {
     }
   }
 
-
   return (
-    <div className="" align="right">
+    <div className="" align="left">
     <select onChange={handleChange}>
-      <option>Sort By:</option>
+      <option>None</option>
       <option value="name">Sort By Name</option>
       <option value="weight">Sort By Weight</option>
     </select>
