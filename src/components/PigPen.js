@@ -5,9 +5,9 @@ class PigPen extends Component {
 
   render() {
     return (
-      <div className="ui grid container">
+      <div className='ui grid container indexWrapper'>
         {this.props.hogs.map((hog, index) => {
-          return <PigTile key= {index} hog = {hog}/>
+          return <PigTile key={index} hog ={hog}/>
         })}
       </div>
     );

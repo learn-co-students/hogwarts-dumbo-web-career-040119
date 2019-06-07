@@ -51,6 +51,17 @@
   color: purple;
 }
 
+#search-button {
+  background-color: white;
+  padding: 0;
+  height: min-content;
+  margin-top: 2%;
+  border-radius: 10em;
+  padding-left: 5px;
+  padding-top: 3px;
+  padding-bottom: 4px;
+}
+
 ul {
   list-style-type: none;
   list-style: none;
@@ -70,19 +81,63 @@ ul {
 
 .indexWrapper {
   margin: auto;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
-
 
 .pigTile {
   display: inline;
   background-repeat: no-repeat;
-  background-position: center 90%;
+  background-position: center 100%;
   float: left;
   margin: 2%;
   padding: 1%;
   outline: #3B0B0B solid;
-  transition: 0.75s;
+  transition: transform 1.2s;
+  transform-style: preserve-3d;
   opacity: 1;
+  height: 24em;
+  align-items: center;
+  align-content: center;
+}
+
+.pigTile:hover {
+  transform: scale(1.05)
+}
+
+.pigTile:active {
+  transform: rotateY(180deg) scale(1.05);
+}
+
+.ui.eight.wide.column.pigTile {
+  /* Use this for defining a %wide */
+}
+
+.card-front, .card-back {
+  backface-visibility: hidden;
+  align-content: center;
+  position: absolute;
+  text-align: center;
+  width: 91%;
+}
+
+.card-front {
+  transition-duration: 1s;
+}
+
+.card-back {
+  transform: rotateY(180deg);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 0;
+  width: 100%;
+  margin-top: 38%;
+  align-content: center;
+  left: 0;
+  right: 0;
 }
 
 .minBackgroundSneak {
@@ -105,6 +160,7 @@ ul {
 .pigTile h3 {
   color: #FBB;
 }
+
 .minPigTile {
   width: 250px;
   height: 250px;
@@ -117,11 +173,6 @@ ul {
   height: 300px;
 }
 
-.pigTile:hover {
-  transform: scale(1.05);
-}
-
-
 .App-logo {
   animation: App-logo-spin infinite 5s linear;
   height: 80px;
@@ -132,7 +183,6 @@ ul {
   padding: 1%;
   clear: both;
 }
-
 
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
