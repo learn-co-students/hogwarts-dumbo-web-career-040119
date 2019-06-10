@@ -3,3 +3,9 @@ body {
   padding: 0;
   font-family: sans-serif;
 }
+
+.single-hog-tile {
+  border: 1px solid black;
+  display: inline-block;
+  padding: 5px; 
+}
