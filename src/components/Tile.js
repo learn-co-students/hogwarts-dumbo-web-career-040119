@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import '../App.css';
 import TileContainer from './TileContainer'
-import Detail from './Detail.js'
+
 
 class Tile extends Component {
 
@@ -17,7 +17,7 @@ class Tile extends Component {
 
   render() {
     return (
-      <div className="single-hog-tile" onClick={this.handleDetailsClick}>
+      <div className="pigTile" onClick={this.handleDetailsClick}>
         {console.log(this.state.clicked)}
         <img src= {this.props.hog.image_url} />
         <p>{this.props.hog.name}</p>
